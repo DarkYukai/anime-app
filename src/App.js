@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+//eu preciso importar o componente
+import AnimeList from './components/AnimeList';
+//importar o pacote que cuida da rotas
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>Senges-Parana</h1>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<AnimeList />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
